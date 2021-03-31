@@ -2,18 +2,23 @@ function presentData(name, type, wage, due) {
 
 }
 
-var projectFormEl = $("#project-form")
-var submitButton = document.querySelector("#submitButton")
-var projectName = document.querySelector("#projectName")
-var projectType = document.querySelector("#projectType")
-var projectWage = document.querySelector("#projectWage")
-var projectDue = document.querySelector("#projectDue")
+
+var submitButton = $("#submitButton")
+var projectName = $("#projectName")
+var projectType = $("#projectType")
+var projectWage = $("#projectWage")
+var projectDue = $("#projectDue")
+var tableRow = $("<tr>")
+var tableDetail = $("<td>")
 
 submitButton.addEventListener("click", takeValue );
 
-function takeValue() {
-    projectName.val()
-    projectType.val()
-    projectWage.val()
-    projectDue.val()   
+function takeValue( ) {
+    
+    nameOfProject = projectName.val()
+    typeOfProject = projectType.val()
+    wageOfProject = projectWage.val()
+    dueOfProject =projectDue.val()
+    presentData(nameOfProject, typeOfProject, wageOfProject, dueOfProject) 
 }
+
